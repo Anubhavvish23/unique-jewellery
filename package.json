@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "jewellery",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +11,9 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "next": "15.1.6",
+    "framer-motion": "^12.1.0",
+    "lucide-react": "^0.474.0"
   },
   "devDependencies": {
     "postcss": "^8",
@@ -20,10 +21,5 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "@eslint/eslintrc": "^3"
-=======
-  "dependencies": {
-    "framer-motion": "^12.1.0",
-    "lucide-react": "^0.474.0"
->>>>>>> dedf15fcec938444ab032155b29a76b302397eff
   }
 }
