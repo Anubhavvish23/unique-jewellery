@@ -19,3 +19,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.rounded-icon {
+  width: 50px; /* Adjust size */
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
