@@ -12,7 +12,7 @@ const Bg = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,14 +45,7 @@ const Bg = () => {
         <p className="text-xl md:text-2xl mb-12 max-w-2xl animate-slide-up opacity-90">
           Discover the finest collection of jewellery with a wholesale price.
         </p>
-        <div className="animate-bounce-subtle mb-12">
-          <a
-            href="/shop"
-            className="bg-white text-amber-500 py-3 px-12 rounded-full font-semibold hover:bg-amber-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20 transform hover:scale-105"
-          >
-            Shop Now
-          </a>
-        </div>
+        
         
         {/* Image Navigation Dots */}
         <div className="flex gap-2 mb-8">

@@ -100,7 +100,7 @@ const Footer = () => {
                 <Phone size={18} className="mr-2" /> +91 7892998441
               </p>
               <p className="flex items-center text-gray-600 hover:text-amber-500 transition-colors duration-300">
-                <Mail size={18} className="mr-2" /> uniquejewellery21@gmail.com
+                <Mail size={18} className="mr-2" /> uniquejewellery31@gmail.com
               </p>
               <p className="flex items-center text-gray-600 hover:text-amber-500 transition-colors duration-300">
                 <MapPin size={18} className="mr-2" /> #110, Wodeyar complex, Next to Bata showroom, Sampige road, Between 7th and 8th cross, Malleshwara, Bengaluru - 03

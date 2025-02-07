@@ -6,7 +6,7 @@ const InstitutionHeadProfile = () => {
   const images = [
     { src: '/Adarsh.jpg', alt: 'Adarsh and Saru, Jewellers' },
     { src: '/saru.jpg', alt: 'Our Jewelry Shop' },
-  
+    { src: '/01.jpg', alt: 'Our Jewelry Shop' },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
