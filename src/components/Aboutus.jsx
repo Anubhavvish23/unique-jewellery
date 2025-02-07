@@ -6,7 +6,10 @@ const InstitutionHeadProfile = () => {
   const images = [
     { src: '/Adarsh.jpg', alt: 'Adarsh and Saru, Jewellers' },
     { src: '/saru.jpg', alt: 'Our Jewelry Shop' },
-    { src: '/01.jpg', alt: 'Our Jewelry Shop' },
+    { src: '/adarsh1.jpg', alt: 'Adarsh and Saru'},
+    { src: '/01.jpg', alt: 'Adarsh and Saru, Jew'},
+    { src: '/adarsh2.jpg', alt: 'Adarsh and Saru'},
+  
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -72,8 +75,8 @@ const InstitutionHeadProfile = () => {
               </div>
             </div>
             <div className="mt-4 text-center">
-              <h2 className="text-xl font-semibold text-amber-800">Adarsh and Saru</h2>
-              <p className="text-sm text-amber-600">Jewellers</p>
+              <h2 className="text-xl font-semibold text-amber-800">Jewellers</h2>
+              <p className="text-sm text-amber-600"></p>
             </div>
           </motion.div>
 
