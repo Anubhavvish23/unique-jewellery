@@ -6,9 +6,9 @@ const InstitutionHeadProfile = () => {
   const images = [
     { src: '/Adarsh.jpg', alt: 'Adarsh and Saru, Jewellers' },
     { src: '/saru.jpg', alt: 'Our Jewelry Shop' },
-    { src: '/adarsh1.jpg', alt: 'Adarsh and Saru'},
-    { src: '/01.jpg', alt: 'Adarsh and Saru, Jew'},
-    { src: '/adarsh2.jpg', alt: 'Adarsh and Saru'},
+    { src: '/Adarsh1.jpg', alt: 'Adarsh and Saru'},
+    { src: '/o1.jpg', alt: 'Adarsh and Saru, Jew'},
+    { src: '/Adarsh2.jpg', alt: 'Adarsh and Saru'},
   
   ];
 
