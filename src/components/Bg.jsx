@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Instagram, MessageCircle, MapPin, Youtube, Facebook, Send, X } from 'lucide-react';
+import { FaInstagram, FaFacebookF, FaLocationDot, FaYoutube } from 'react-icons/fa6';
+import { BsWhatsapp } from 'react-icons/bs';
+import { IoSend, IoClose } from 'react-icons/io5';
+
 
 const Bg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -126,11 +129,12 @@ const Bg = () => {
 
         <div className="flex gap-6 mt-8">
           {[
-            { Icon: Instagram, href: "https://www.instagram.com/uniquejewellery93?igsh=NjRiZmsyZTJuY2Zy", bgColor: "bg-gradient-to-tr from-pink-500 via-red-500 to-purple-500", iconColor: "text-white" },
-            { Icon: Facebook, href: "https://www.facebook.com/share/1B36zhAfUD/", bgColor: "bg-blue-600", iconColor: "text-white" },
-            { Icon: MessageCircle, onClick: () => setShowChat(!showChat), bgColor: "bg-green-500", iconColor: "text-white" },
-            { Icon: MapPin, href: "https://maps.app.goo.gl/jaX6E6n4hkgthQGS9", bgColor: "bg-red-500", iconColor: "text-white" },
-            { Icon: Youtube, href: "https://youtube.com/@uniquejewellery-b7s?si=vQdSv-rfi9yAAJ6a", bgColor: "bg-red-600", iconColor: "text-white" }
+            { Icon: FaInstagram, href: "https://www.instagram.com/uniquejewellery93?igsh=NjRiZmsyZTJuY2Zy", bgColor: "bg-gradient-to-tr from-pink-500 via-red-500 to-purple-500", iconColor: "text-white" },
+            { Icon: FaFacebookF, href: "https://www.facebook.com/share/1B36zhAfUD/", bgColor: "bg-blue-600", iconColor: "text-white" },
+            { Icon: BsWhatsapp, onClick: () => setShowChat(!showChat), bgColor: "bg-green-500", iconColor: "text-white" },
+            { Icon: FaLocationDot, href: "https://maps.app.goo.gl/jaX6E6n4hkgthQGS9", bgColor: "bg-red-500", iconColor: "text-white" },
+            { Icon: FaYoutube, href: "https://youtube.com/@uniquejewellery-b7s?si=vQdSv-rfi9yAAJ6a", bgColor: "bg-red-600", iconColor: "text-white" }
+
           ].map(({ Icon, href, onClick, bgColor, iconColor }, index) => {
             const Component = href ? 'a' : 'button';
             return (
@@ -149,9 +153,8 @@ const Bg = () => {
               >
                 <Icon 
                   className={`w-6 h-6 ${iconColor} transform group-hover:rotate-12 transition-transform`}
-                  strokeWidth={2.5}
-                  fill="currentColor"
                 />
+
               </Component>
             );
           })}
