@@ -82,7 +82,6 @@ const ProductCategories = ({ onNavClick }) => {
     { title: 'jb10', description: 'jb10 Image', image: '/jb10.jpeg' },
     { title: 'jb11', description: 'jb11 Image', image: '/jb11.jpeg' },
     { title: 'jb12', description: 'jb12 Image', image: '/jb12.jpeg' },
-    { title: 'l1', description: 'l1 Image', image: '/l1.png' },
     { title: 'n1', description: 'n1 Image', image: '/n1.jpg' },
     { title: 'n2', description: 'n2 Image', image: '/n2.jpg' },
     { title: 'n3', description: 'n3 Image', image: '/n3.jpg' },
