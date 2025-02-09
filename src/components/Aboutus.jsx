@@ -22,7 +22,7 @@ const InstitutionHeadProfile = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-yellow-100 p-4 md:p-8">
+    <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

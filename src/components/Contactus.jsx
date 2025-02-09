@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ContactUs = () => {
   return (
-    <section id="contact" className="py-16 bg-gradient-to-b from-yellow-100 to-yellow-100 font-serif">
+    <section id="contact" className="py-16 bg-white   ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-light tracking-wide text-amber-800 mb-3 animate-fade-in-down font-['Playfair_Display']">
@@ -80,7 +80,7 @@ const ContactUs = () => {
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-1 text-lg">Email</h4>
                     <p className="text-gray-600 group-hover:text-gray-900">
-                      uniquejewellery21@gmail.com
+                      uniquejewellery31@gmail.com
                     </p>
                   </div>
                 </a>

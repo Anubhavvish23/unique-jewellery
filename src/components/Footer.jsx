@@ -131,14 +131,14 @@ const Footer = () => {
             </p>
             <span className="hidden md:inline">•</span>
               <p className="text-gray-600 text-sm">
-                Designed & Developed by{' '}
+                {' '}
                 <a 
                   href="https://www.notarc.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-amber-600 hover:text-amber-700 transition-colors"
                 >
-                  Notarc
+               
                 </a>
               </p>
           </div>

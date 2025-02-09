@@ -9,7 +9,7 @@ const Bg = () => {
   const [message, setMessage] = useState('');
   const [isHovering, setIsHovering] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const images = ['/bg1.avif', '/bg.jpg', '/bg2.jpg'];
+  const images = ['/Adarsh.jpg', '/saru.jpg', '/o1.jpg','n5.jpg','b1.jpeg'];
   const phoneNumber = "917892998441";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
@@ -84,18 +84,18 @@ const Bg = () => {
             ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
             style={{ transitionDelay: '0.5s' }}
           >
-            Welcome to{' '}
+           {' '}
             <span 
               className="text-amber-400 relative"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              Unique
+          
               {isHovering && (
                 <div className="absolute inset-0 bg-amber-400/20 blur-lg animate-pulse" />
               )}
             </span>{' '}
-            Jewellery Shop
+     
           </h1>
         </div>
         
@@ -103,7 +103,7 @@ const Bg = () => {
           ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
           style={{ transitionDelay: '0.7s' }}
         >
-          Discover the finest collection of jewellery with a wholesale price.
+         
         </p>
 
         {/* Enhanced button with float animation */}
