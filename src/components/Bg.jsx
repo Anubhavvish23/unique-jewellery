@@ -9,27 +9,26 @@ const Bg = () => {
   const [message, setMessage] = useState('');
   const [isHovering, setIsHovering] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const images = ['/Adarsh.jpg', '/saru.jpg', '/o1.jpg','n5.jpg','b1.jpeg'];
+  
+  // Fixed image paths to include leading forward slash
+  const images = ['/Adarsh.jpg', '/saru.jpg', '/o1.jpg', '/n5.jpg', '/b1.jpeg'];
   const phoneNumber = "917892998441";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-  // Image rotation effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
-    // Trigger entrance animations after component mounts
     setIsLoaded(true);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Delayed WhatsApp chat appearance
   useEffect(() => {
     const chatTimer = setTimeout(() => {
       setShowChat(true);
-    }, 3000); // Shows chat after 3 seconds
+    }, 3000);
 
     return () => clearTimeout(chatTimer);
   }, []);
@@ -41,7 +40,6 @@ const Bg = () => {
     setMessage('');
   };
 
-  // Sparkle effect component
   const Sparkle = ({ style }) => (
     <div 
       className="absolute w-1 h-1 bg-amber-400 rounded-full animate-sparkle"
@@ -51,7 +49,6 @@ const Bg = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Images with enhanced transition */}
       {images.map((image, index) => (
         <div
           key={image}
@@ -59,7 +56,7 @@ const Bg = () => {
             ${currentImageIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
             ${isLoaded ? 'translate-x-0' : '-translate-x-full'}`}
           style={{
-            backgroundImage: `url('${image}')`,
+            backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             zIndex: currentImageIndex === index ? 1 : 0,
             transitionDelay: isLoaded ? '0.3s' : '0s'
@@ -67,15 +64,12 @@ const Bg = () => {
         />
       ))}
 
-      {/* Enhanced gradient overlay with shimmer effect */}
       <div className={`absolute inset-0 bg-gradient-to-b from-black/70 to-black/50 animate-shimmer z-[2]
         transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-full'}`}
-      ></div>
+      />
 
-      {/* Content with enhanced animations */}
       <div className="relative z-[3] flex flex-col items-center justify-center h-full text-center text-white px-4">
         <div className="relative">
-          {/* Decorative sparkles */}
           <Sparkle style={{ top: '-20px', left: '10px' }} />
           <Sparkle style={{ top: '20px', right: '10px' }} />
           <Sparkle style={{ bottom: '-10px', left: '50%' }} />
@@ -84,41 +78,34 @@ const Bg = () => {
             ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
             style={{ transitionDelay: '0.5s' }}
           >
-           {' '}
             <span 
               className="text-amber-400 relative"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-          
               {isHovering && (
                 <div className="absolute inset-0 bg-amber-400/20 blur-lg animate-pulse" />
               )}
-            </span>{' '}
-     
+            </span>
           </h1>
         </div>
         
         <p className={`text-xl md:text-2xl mb-12 max-w-2xl transition-all duration-1000 ease-out
           ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
           style={{ transitionDelay: '0.7s' }}
-        >
-         
-        </p>
+        />
 
-        {/* Enhanced button with float animation */}
         <div className={`animate-float mb-12 transition-all duration-1000 ease-out
           ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
           style={{ transitionDelay: '0.9s' }}
         >
-          <button className="group bg-white text-amber-500 py-3 px-12 rounded-full font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-white hover:shadow-lg hover:shadow-amber-500/20 transform hover:scale-105">
+          <a href="tel:+917892998441" className="group bg-white text-amber-500 py-3 px-12 rounded-full font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-white hover:shadow-lg hover:shadow-amber-500/20 transform hover:scale-105">
             <span className="inline-block transform group-hover:scale-105 transition-transform">
-              Shop Now
+              Call Now
             </span>
-          </button>
+          </a>
         </div>
 
-        {/* Enhanced image navigation dots */}
         <div className={`flex gap-2 mb-8 transition-all duration-1000 ease-out
           ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
           style={{ transitionDelay: '1.1s' }}
@@ -137,7 +124,6 @@ const Bg = () => {
           ))}
         </div>
 
-        {/* Enhanced social icons with stagger animation */}
         <div className="flex gap-6 mt-8">
           {[
             { Icon: Instagram, href: "https://www.instagram.com/uniquejewellery93?igsh=NjRiZmsyZTJuY2Zy" },
@@ -168,7 +154,6 @@ const Bg = () => {
         </div>
       </div>
 
-      {/* Enhanced WhatsApp Chat Widget with fade-in animation */}
       {showChat && (
         <div className="fixed bottom-24 right-4 z-50 max-w-sm w-full md:w-96 rounded-lg shadow-lg animate-fade-in">
           <div className="bg-emerald-500 p-4 rounded-t-lg flex justify-between items-center">
@@ -188,9 +173,7 @@ const Bg = () => {
               <p className="text-gray-600 mb-2">👋 Welcome to Unique Jewellery Shop!</p>
               <p className="text-gray-500 text-sm">Feel free to ask us anything about our jewelry collection.</p>
             </div>
-            <div className="h-64 bg-gray-50 p-4 overflow-y-auto">
-              {/* Chat history would go here */}
-            </div>
+            <div className="h-64 bg-gray-50 p-4 overflow-y-auto" />
             <form onSubmit={handleSendMessage} className="p-4 bg-white rounded-b-lg flex gap-2">
               <input
                 type="text"
