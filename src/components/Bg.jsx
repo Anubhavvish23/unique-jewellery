@@ -126,12 +126,12 @@ const Bg = () => {
 
         <div className="flex gap-6 mt-8">
           {[
-            { Icon: Instagram, href: "https://www.instagram.com/uniquejewellery93?igsh=NjRiZmsyZTJuY2Zy" },
-            { Icon: Facebook, href: "https://www.facebook.com/share/1B36zhAfUD/" },
-            { Icon: MessageCircle, onClick: () => setShowChat(!showChat) },
-            { Icon: MapPin, href: "https://maps.app.goo.gl/jaX6E6n4hkgthQGS9" },
-            { Icon: Youtube, href: "https://youtube.com/@uniquejewellery-b7s?si=vQdSv-rfi9yAAJ6a" }
-          ].map(({ Icon, href, onClick }, index) => {
+            { Icon: Instagram, href: "https://www.instagram.com/uniquejewellery93?igsh=NjRiZmsyZTJuY2Zy", bgColor: "bg-gradient-to-tr from-pink-500 via-red-500 to-purple-500", iconColor: "text-white" },
+            { Icon: Facebook, href: "https://www.facebook.com/share/1B36zhAfUD/", bgColor: "bg-blue-600", iconColor: "text-white" },
+            { Icon: MessageCircle, onClick: () => setShowChat(!showChat), bgColor: "bg-green-500", iconColor: "text-white" },
+            { Icon: MapPin, href: "https://maps.app.goo.gl/jaX6E6n4hkgthQGS9", bgColor: "bg-red-500", iconColor: "text-white" },
+            { Icon: Youtube, href: "https://youtube.com/@uniquejewellery-b7s?si=vQdSv-rfi9yAAJ6a", bgColor: "bg-red-600", iconColor: "text-white" }
+          ].map(({ Icon, href, onClick, bgColor, iconColor }, index) => {
             const Component = href ? 'a' : 'button';
             return (
               <Component
@@ -140,14 +140,18 @@ const Bg = () => {
                 onClick={onClick}
                 target={href ? "_blank" : undefined}
                 rel={href ? "noopener noreferrer" : undefined}
-                className={`p-3 bg-white/10 rounded-full backdrop-blur-sm hover:bg-amber-500 
-                  transition-all duration-1000 hover:scale-110 group
+                className={`p-3 ${bgColor} rounded-full shadow-lg hover:scale-110 
+                  transition-all duration-300 group
                   ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
                 style={{
                   transitionDelay: `${1.3 + index * 0.1}s`
                 }}
               >
-                <Icon className="w-6 h-6 text-white group-hover:text-white transform group-hover:rotate-12 transition-transform" />
+                <Icon 
+                  className={`w-6 h-6 ${iconColor} transform group-hover:rotate-12 transition-transform`}
+                  strokeWidth={2.5}
+                  fill="currentColor"
+                />
               </Component>
             );
           })}
