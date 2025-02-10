@@ -13,7 +13,8 @@ const Bg = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   // Fixed image paths to include leading forward slash
-  const images = ['/Adarsh.jpg', '/saru.jpg', '/o1.jpg', '/n5.jpg', '/b1.jpeg'];
+const images = ['/Adarsh.jpg', '/saru.jpg', '/o1.jpg', '/n5.jpg', '/b1.jpeg'];
+
   const phoneNumber = "917892998441";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
@@ -101,7 +102,8 @@ const Bg = () => {
           ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
           style={{ transitionDelay: '0.9s' }}
         >
-          <a href="tel:+917892998441" className="group bg-white text-amber-500 py-3 px-12 rounded-full font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-white hover:shadow-lg hover:shadow-amber-500/20 transform hover:scale-105">
+<a href="tel:+917892998441" className="group bg-white text-amber-500 py-3 px-12 rounded-full font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-white hover:shadow-lg hover:shadow-amber-500/20 transform hover:scale-105" aria-label="Call Now">
+
             <span className="inline-block transform group-hover:scale-105 transition-transform">
               Call Now
             </span>
@@ -183,8 +185,6 @@ const Bg = () => {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border rounded-full focus:outline-none focus:border-emerald-500 transition-colors"
               />
               <button
                 type="submit"
