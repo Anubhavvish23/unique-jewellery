@@ -5,7 +5,6 @@ import { FaInstagram, FaFacebookF, FaLocationDot, FaYoutube } from 'react-icons/
 import { BsWhatsapp } from 'react-icons/bs';
 import { IoSend, IoClose } from 'react-icons/io5';
 
-
 const Bg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showChat, setShowChat] = useState(false);
@@ -134,7 +133,6 @@ const Bg = () => {
             { Icon: BsWhatsapp, onClick: () => setShowChat(!showChat), bgColor: "bg-green-500", iconColor: "text-white" },
             { Icon: FaLocationDot, href: "https://maps.app.goo.gl/jaX6E6n4hkgthQGS9", bgColor: "bg-red-500", iconColor: "text-white" },
             { Icon: FaYoutube, href: "https://youtube.com/@uniquejewellery-b7s?si=vQdSv-rfi9yAAJ6a", bgColor: "bg-red-600", iconColor: "text-white" }
-
           ].map(({ Icon, href, onClick, bgColor, iconColor }, index) => {
             const Component = href ? 'a' : 'button';
             return (
@@ -154,7 +152,6 @@ const Bg = () => {
                 <Icon 
                   className={`w-6 h-6 ${iconColor} transform group-hover:rotate-12 transition-transform`}
                 />
-
               </Component>
             );
           })}
@@ -172,7 +169,7 @@ const Bg = () => {
               onClick={() => setShowChat(false)}
               className="text-white hover:bg-emerald-600 p-1 rounded-full transition-colors"
             >
-              <X className="w-6 h-6 transform hover:rotate-90 transition-transform" />
+              <IoClose className="w-6 h-6 transform hover:rotate-90 transition-transform" />
             </button>
           </div>
           <div className="bg-gray-100">
@@ -193,7 +190,7 @@ const Bg = () => {
                 type="submit"
                 className="p-2 bg-emerald-500 text-white rounded-full hover:bg-emerald-600 transition-colors group"
               >
-                <Send className="w-5 h-5 transform group-hover:-rotate-12 transition-transform" />
+                <IoSend className="w-5 h-5 transform group-hover:-rotate-12 transition-transform" />
               </button>
             </form>
           </div>
